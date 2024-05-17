@@ -5,7 +5,7 @@
 var createCounter = function(n) {
     let times = -1;
     return function() {
-        times = times + 1;
+        times += 1;
         return n + times;
     };
 };
