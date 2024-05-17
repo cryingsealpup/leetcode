@@ -1,7 +1,4 @@
-function createHelloWorld() {
-    
-    return () => "Hello World";
-};
+const createHelloWorld = () => () => "Hello World";
 
 /**
  * const f = createHelloWorld();
