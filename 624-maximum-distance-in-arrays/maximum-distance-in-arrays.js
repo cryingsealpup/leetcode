@@ -15,9 +15,9 @@ var maxDistance = function(arrays) {
     let max = Math.max(...maxs);
     diff = Math.abs(max - min);
     if (maxs.indexOf(max) === mins.indexOf(min)) {
-        let diffMax = Math.max(...maxs.splice(maxs.indexOf(max), 1)) - min;
-        let diffMin = max - Math.min(...mins.splice(mins.indexOf(min), 1));
-        diff = Math.max(Math.abs(Math.max(...maxs.splice(maxs.indexOf(max), 1)) - min), Math.abs(max - Math.min(...mins.splice(mins.indexOf(min), 1))));
+        maxs.splice(maxs.indexOf(max), 1);
+        mins.splice(mins.indexOf(min), 1);
+        diff = Math.max(Math.abs(Math.max(...maxs) - min), Math.abs(max - Math.min(...mins)));
     }
     return diff;
 };
